@@ -5,7 +5,158 @@
 }
 
 body {
+    font-family: 'Roboto', sans-serif;/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
+    background-color: #444444; /* Fundo cinza escuro da imagem */
+    color: #333;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Topo Vermelho Estilo Kool-Aid */
+.topo-vermelho {
+    background-color: #c92a2a;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.logo-koolaid {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 5rem;
+    color: white;
+    /* Efeito de borda azul e sombra */
+    text-shadow: 
+        -4px -4px 0 #1a4a8e,  
+         4px -4px 0 #1a4a8e,
+        -4px  4px 0 #1a4a8e,
+         4px  4px 0 #1a4a8e,
+         8px  8px 0px rgba(0,0,0,0.3);
+    letter-spacing: 3px;
+}
+
+/* Menu de Navegação */
+.menu-nav {
+    background: white;
+    padding: 12px 0;
+    margin-bottom: 30px;
+}
+
+.menu-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.identidade-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+}
+
+.mini-jarra { height: 35px; }
+
+.menu-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Estilo dos Cards Brancos */
+.card {
+    background: white;
+    border-radius: 4px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+    color: #1a4a8e;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Layout História (Jarra + Texto) */
+.card-content-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.lado-esquerdo {
+    flex: 1;
+    text-align: center;
+}
+
+.jarra-destaque {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 15px;
+}
+
+.slogan {
+    color: #c92a2a;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.lado-direito { flex: 2; }
+
+.lado-direito p { margin-bottom: 15px; text-align: justify; }
+
+.integrantes {
+    background: #f1f1f1;
+    padding: 15px;
+    border-left: 5px solid #1a4a8e;
+}
+
+/* Galeria em Grid */
+.grid-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.item-foto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.item-foto p {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    color: #666;
+}
+
+footer {
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+}
     background-color: #f0f2f5; /* Cinza claro da imagem */
     color: #333;
 }
@@ -136,3 +287,4 @@ body {
     margin-top: 40px;
     border-top: 1px solid #ddd;
 }
+
