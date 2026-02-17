@@ -5,52 +5,103 @@
 }
 
 body {
-    background-color: #000000; /* Fundo preto puro */
+    background-color: #d32f2f; /* Vermelho base */
     color: white;
-    font-family: Arial, sans-serif;
-}
-
-.header-banda {
+    font-family: 'Arial Black', sans-serif;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
 }
 
-.logo-principal {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    /* Faz o fundo preto da imagem PNG sumir no fundo preto do site */
-    mix-blend-mode: screen; 
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-nav a {
-    color: #00a2ff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.personagem-fixo {
+/* Efeito de Raios (Sunburst) */
+.sunburst {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    top: 50%;
+    left: 50%;
+    width: 200vw;
+    height: 200vw;
+    transform: translate(-50%, -50%);
+    background: repeating-conic-gradient(
+        from 0deg,
+        #e53935 0deg 15deg,
+        #c62828 15deg 30deg
+    );
+    z-index: -1;
+    animation: rotate 60s linear infinite;
 }
 
-.jarrinha-img {
-    width: 150px;
-    height: auto;
-    mix-blend-mode: screen; /* Remove fundo preto da jarrinha */
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
+header {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 50px;
+}
+
+.logo {
+    width: 350px;
+    mix-blend-mode: screen; /* Remove fundo preto */
+    filter: drop-shadow(5px 5px 0px #0056b3); /* Sombra azul sólida estilo HQ */
+}
+
+nav {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-nav.active {
+    background-color: white;
+    color: #c62828;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
+}
+
+.conteudo-principal h1 {
+    font-size: 3rem;
+    text-shadow: 4px 4px 0px #0056b3; /* Sombra azul nas letras */
+    margin-bottom: 10px;
+}
+
+.container-jarrinha {
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+}
+
+.jarrinha {
+    width: 500px;
+    mix-blend-mode: screen;
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.5));
+    transform: rotate(-5deg);
+}
+
+/* Ajuste Celular */
 @media (max-width: 768px) {
-    .logo-principal { max-width: 250px; }
-    .jarrinha-img { width: 100px; }
+    header { align-items: center; margin-left: 0; }
+    .logo { width: 250px; }
+    .conteudo-principal { text-align: center; margin-top: 50px; }
+    .container-jarrinha { position: relative; right: 0; margin-top: 20px; }
+    .jarrinha { width: 250px; }
 }
