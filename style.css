@@ -5,29 +5,36 @@
     --vermelho: #d63031;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 body { font-family: 'Montserrat', sans-serif; background: #fff; color: var(--azul); }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* Header */
-.ks-header { background: var(--amarelo); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+/* Header e Menu */
+.ks-header { background: var(--amarelo); padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
 .ks-nav-flex { display: flex; justify-content: space-between; align-items: center; }
-.ks-logo-text { font-family: 'Luckiest Guy', cursive; font-size: 2.2rem; color: #fff; text-shadow: 3px 3px 0 var(--azul); }
+.ks-logo-text { font-family: 'Luckiest Guy', cursive; font-size: 2.5rem; color: #fff; text-shadow: 3px 3px 0 var(--azul); }
 .ks-logo-text span { color: var(--vermelho); }
 .ks-menu ul { display: flex; list-style: none; gap: 10px; }
-.ks-menu a { text-decoration: none; color: #fff; background: var(--azul); padding: 8px 18px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; }
+.ks-menu a { text-decoration: none; color: #fff; background: var(--azul); padding: 10px 20px; border-radius: 30px; font-weight: 700; font-size: 0.8rem; transition: 0.3s; }
+.ks-menu a:hover { background: var(--vermelho); transform: scale(1.1); }
 
-/* Hero e Animação da Jarra */
-.ks-hero { background: linear-gradient(180deg, var(--amarelo) 0%, var(--laranja) 100%); padding: 60px 0 100px; position: relative; }
-.ks-hero-flex { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+/* Hero Section e Mascote Animado */
+.ks-hero { background: linear-gradient(180deg, var(--amarelo) 0%, var(--laranja) 100%); padding: 80px 0 120px; position: relative; overflow: hidden; }
+.ks-hero-flex { display: flex; align-items: center; justify-content: center; gap: 60px; flex-wrap: wrap; }
 
 .floating-jar {
-    width: 350px; /* Tamanho da jarra */
+    width: 380px; /* Tamanho ajustado para destaque */
     height: auto;
-    filter: drop-shadow(10px 10px 0 rgba(0,0,0,0.1));
-    /* A mágica do movimento aqui */
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
     animation: bounceRotate 4s ease-in-out infinite;
-    display: block;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* Efeito de Brilho e Zoom ao passar o mouse na Jarra */
+.floating-jar:hover {
+    filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.8));
+    transform: scale(1.1) rotate(0deg) !important;
 }
 
 @keyframes bounceRotate {
@@ -35,14 +42,21 @@ body { font-family: 'Montserrat', sans-serif; background: #fff; color: var(--azu
     50% { transform: translateY(-30px) rotate(8deg); }
 }
 
-.ks-hero-text h2 { font-size: 3.8rem; color: #fff; line-height: 0.9; font-weight: 900; text-transform: uppercase; }
+.ks-hero-text h2 { font-size: 4rem; color: #fff; line-height: 0.9; font-weight: 900; text-transform: uppercase; }
 .highlight { color: var(--vermelho); }
-.wave { position: absolute; bottom: -1px; width: 100%; line-height: 0; }
-.wave svg { width: 100%; height: 80px; }
+.ks-hero-text p { color: #fff; font-size: 1.2rem; margin-top: 15px; font-weight: 700; }
 
-/* Galeria */
-.ks-section { padding: 60px 0; }
+.wave { position: absolute; bottom: -1px; width: 100%; line-height: 0; }
+.wave svg { width: 100%; height: 90px; }
+
+/* Conteúdo e Galeria */
+.ks-section { padding: 80px 0; }
 .ks-bg-light { background: #fdf2e9; }
-.ks-title { text-align: center; font-size: 2.5rem; margin-bottom: 30px; color: var(--laranja); font-weight: 900; }
-.ks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-.ks-photo img { width: 100%; height: 230px; object-fit: cover; border-radius: 20px; border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.ks-title { text-align: center; font-size: 3rem; margin-bottom: 40px; color: var(--laranja); font-weight: 900; }
+.ks-content-card { background: #fff; padding: 40px; border-radius: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; line-height: 1.8; }
+
+.ks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.ks-photo img { width: 100%; height: 260px; object-fit: cover; border-radius: 25px; border: 6px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+.ks-photo img:hover { transform: translateY(-10px) rotate(2deg); }
+
+.ks-footer { background: var(--azul); color: #fff; text-align: center; padding: 40px; margin-top: 50px; }
