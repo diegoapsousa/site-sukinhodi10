@@ -3,74 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sukinho di 10 | Punk Rock Cultural</title>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sukinho di 10 | Relembre o sabor do Punk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="topo-vermelho">
-        <div class="container">
-            <h1 class="logo-koolaid">Sukinho di 10</h1>
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <h1 class="brand-text">Sukinho <span>di 10</span></h1>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#marca">SOBRE A BANDA</a></li>
+                    <li><a href="#sabores">GALERIA</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+            </nav>
+            <div class="search-icon">🔍</div>
         </div>
     </header>
 
-    <nav class="menu-nav">
-        <div class="container menu-flex">
-            <div class="identidade-menu">
-                <img src="img/jarra.png" alt="Logo" class="mini-jarra">
-                <span>Sukinho di 10</span>
+    <section class="hero">
+        <div class="container hero-flex">
+            <div class="hero-image">
+                <img src="img/jarra_koolaid.png" alt="Mascote Sukinho" class="mascote-float">
             </div>
-            <ul>
-                <li><a href="#home">#Home</a></li>
-                <li><a href="#historia">#historia</a></li>
-                <li><a href="#galeria">#Galeria</a></li>
-            </ul>
+            <div class="hero-text">
+                <h2>Relembre o <br><span>sabor da infância</span></h2>
+                <p>O Punk Rock artesanal com a identidade local de Carapicuíba.</p>
+            </div>
         </div>
-    </nav>
+        <div class="wave-container">
+            <svg viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    </section>
 
-    <main class="container">
-        <section id="historia" class="card">
-            <div class="card-content-flex">
-                <div class="lado-esquerdo">
-                    <img src="img/jarra.png" alt="Jarra Sukinho" class="jarra-destaque">
-                    <p class="slogan">Punk Rock com Sabor de Diversão</p>
-                </div>
-                
-                <div class="lado-direito">
-                    <h2>Nossa História</h2>
-                    <p>A banda <strong>Sukinho di 10</strong> foi formada no ano de 2002. Resolveram montar uma banda por forte influencia que tiveram das bandas de punk rock como Ramones, The Queers, Green Day e do cenário nacional como Holly Tree, Carbona, Flanders 72 entre outras.</p>
-                    
-                    <h3>Como surgiu</h3>
-                    <p>O nome sukinho di 10 foi dado devido às pausas durante o ensaio na casa do vocalista Diego, eles aproveitavam para tomar muito aquele suco chamado Ki-suco, pois era o mais barato da época e conhecido popularmente por suquinho de 10 centavos.</p>
-                    
-                    <p>O lema da banda é levar diversão e bom humor para toda a galera, com musicas e melodias totalmente enérgicas.</p>
-
-                    <div class="integrantes">
-                        <h4>Integrantes</h4>
-                        <p>Vocal e Baixo: Diego (Deids) | Guitarra: Juninho | Bateria: Fagner</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="galeria" class="card">
-            <h2>Galeria do Rolê</h2>
-            <div class="grid-fotos">
-                <div class="item-foto"><img src="img/foto1.png"><p>Show 1</p></div>
-                <div class="item-foto"><img src="img/foto2.png"><p>Ensaios</p></div>
-                <div class="item-foto"><img src="img/foto3.png"><p>Na Estrada</p></div>
-                <div class="item-foto"><img src="img/foto4.png"><p>Energia</p></div>
-                <div class="item-foto"><img src="img/foto5.png"><p>Galera</p></div>
-                <div class="item-foto"><img src="img/foto6.png"><p>Comunidade</p></div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
+    <section id="marca" class="history-section">
         <div class="container">
-            <p>&copy; 2026 Sukinho di 10 - Rock Nacional e Cultura Local</p>
+            <h2 class="section-title">Nossa História</h2>
+            <div class="history-card">
+                <p>A banda <strong>Sukinho di 10</strong> foi formada no ano de 2002, inspirada pela energia do punk rock e pelas pausas regadas a muito suco barato de 10 centavos. Com influências de Ramones e The Toy Dolls, levamos diversão e letras cômicas para a galera.</p>
+                <div class="lineup-tags">
+                    <span>Vocal/Baixo: Diego</span>
+                    <span>Guitarra: Juninho</span>
+                    <span>Bateria: Fagner</span>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section id="sabores" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Galeria do Rolê</h2>
+            <div class="photo-grid">
+                <div class="photo-card"><img src="img/foto1.jpg" alt="Show"></div>
+                <div class="photo-card"><img src="img/foto2.jpg" alt="Ensaio"></div>
+                <div class="photo-card"><img src="img/foto3.jpg" alt="Palco"></div>
+                <div class="photo-card"><img src="img/foto4.jpg" alt="Integrantes"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>Sukinho di 10 © 2026 - Todos os direitos reservados.</p>
     </footer>
 
 </body>
