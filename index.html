@@ -3,146 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sukinho di 10 | Extensão Cultural</title>
-    
-    <style>
-        /* CSS EMBUTIDO PARA NÃO DAR ERRO DE CONEXÃO */
-        :root {
-            --vermelho-principal: #d63031;
-            --fundo-suave: #f9f9f9;
-        }
-
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: var(--fundo-suave);
-            color: #333;
-        }
-
-        /* Topo do Site */
-        header {
-            background-color: white;
-            padding: 10px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo-img {
-            height: 60px; /* Ajusta o tamanho do seu nome.png */
-            width: auto;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--vermelho-principal);
-            font-weight: bold;
-        }
-
-        /* Banner Principal */
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            padding: 50px 5%;
-            gap: 30px;
-            background: white;
-        }
-
-        .hero-text {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-        }
-
-        .hero-text h1 {
-            font-size: 2.5rem;
-            color: var(--vermelho-principal);
-            margin-bottom: 10px;
-        }
-
-        .img-jarra {
-            max-width: 300px;
-            height: auto;
-            border-radius: 20px;
-        }
-
-        /* Seção de Fotos (Cultura e Produção) */
-        .secao-cultura {
-            padding: 50px 5%;
-            text-align: center;
-        }
-
-        .grid-fotos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .grid-fotos img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover; /* Faz a foto preencher o quadrado sem esticar */
-            border-radius: 12px;
-            border: 4px solid white;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            background: var(--vermelho-principal);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+    <title>Sukinho di 10 | Projeto Cultural</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <img src="img/nome.png" alt="Logo Sukinho di 10" class="logo-img">
-        <nav>
-            <ul>
-                <li><a href="#fotos">Galeria</a></li>
-                <li><a href="#sobre">Projeto</a></li>
-            </ul>
-        </nav>
+        <div class="container nav-bar">
+            <img src="img/nome.png" alt="Sukinho di 10" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Sukinho di 10</h1>
-            <p>Trabalho de Extensão: Valorizando a cultura e o empreendedorismo local.</p>
-        </div>
-        <img src="img/jarra.png" alt="Nossa Jarra" class="img-jarra">
-    </section>
+    <main>
+        <section id="home" class="hero container">
+            <div class="hero-content">
+                <img src="img/jarra.png" alt="Mascote Sukinho" class="jarra-img">
+                <h1>Cultura e Sabor</h1>
+                <p>Valorizando a produção artesanal e a identidade local.</p>
+            </div>
+        </section>
 
-    <main class="secao-cultura" id="fotos">
-        <h2>Galeria Cultural de Produção</h2>
-        <div class="grid-fotos">
-            <img src="img/foto1.png" alt="Foto 1">
-            <img src="img/foto2.png" alt="Foto 2">
-            <img src="img/foto3.png" alt="Foto 3">
-            <img src="img/foto4.png" alt="Foto 4">
-            <img src="img/foto5.png" alt="Foto 5">
-            <img src="img/foto6.png" alt="Foto 6">
-        </div>
+        <section id="galeria" class="container">
+            <h2 class="titulo-secao">Nossa Produção Cultural</h2>
+            <div class="grid-fotos">
+                <img src="img/foto1.png" alt="Cultura 1">
+                <img src="img/foto2.png" alt="Cultura 2">
+                <img src="img/foto3.png" alt="Cultura 3">
+                <img src="img/foto4.png" alt="Cultura 4">
+                <img src="img/foto5.png" alt="Cultura 5">
+                <img src="img/foto6.png" alt="Cultura 6">
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Sukinho di 10 - Projeto de Extensão Universitária</p>
+        <p>&copy; 2026 Sukinho di 10 - Trabalho de Extensão</p>
     </footer>
 
 </body>
