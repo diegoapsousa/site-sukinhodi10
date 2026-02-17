@@ -1,9 +1,4 @@
-:root {
-    --vermelho: #d63031;
-    --bege-claro: #fdfaf5;
-    --texto: #2d3436;
-}
-
+/* Configurações Gerais */
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +6,9 @@
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    background-color: var(--bege-claro);
-    color: var(--texto);
+    font-family: 'Helvetica', Arial, sans-serif;
+    background-color: #fdf5e6; /* Fundo Creme/Bege Suave */
+    color: #444;
     line-height: 1.6;
 }
 
@@ -25,22 +20,19 @@ body {
 
 /* Header */
 header {
-    background: #fff;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #d63031; /* Vermelho apenas no topo */
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.nav-container {
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    height: 50px; /* Controla o tamanho do nome.png */
+    height: 55px;
     width: auto;
 }
 
@@ -50,83 +42,62 @@ nav ul {
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: var(--vermelho);
     font-weight: bold;
-    margin-left: 25px;
-    transition: 0.3s;
+    margin-left: 20px;
 }
 
-nav ul li a:hover {
-    color: #b32626;
-}
-
-/* Hero Section */
+/* Seção Principal */
 .hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 80px 20px;
-}
-
-.hero-text h1 {
-    font-size: 3rem;
-    color: var(--vermelho);
-    margin-bottom: 20px;
-}
-
-.hero-img img {
-    max-width: 350px; /* Tamanho da jarra.png */
-    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.1));
-}
-
-.btn {
-    display: inline-block;
-    background: var(--vermelho);
-    color: #fff;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 30px;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-/* Galeria */
-.produtos {
-    padding: 60px 20px;
+    padding: 60px 0;
     text-align: center;
 }
 
-.produtos h2 {
-    margin-bottom: 40px;
-    font-size: 2rem;
-    color: var(--vermelho);
+.jarra-img {
+    max-width: 280px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
 }
 
-.galeria {
+.hero h1 {
+    font-size: 2.5rem;
+    color: #d63031;
+}
+
+/* Galeria de Fotos */
+.titulo-secao {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #d63031;
+}
+
+.grid-fotos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    padding-bottom: 60px;
 }
 
-.foto-card img {
+.grid-fotos img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
+    height: 350px;
+    object-fit: cover; /* Mantém as fotos de música/cultura sem distorcer */
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
-.foto-card img:hover {
-    transform: scale(1.02);
+.grid-fotos img:hover {
+    transform: translateY(-10px);
 }
 
-/* Footer */
+/* Rodapé */
 footer {
-    background: var(--vermelho);
+    background-color: #333;
     color: white;
     text-align: center;
-    padding: 30px 0;
-    margin-top: 50px;
+    padding: 30px;
 }
