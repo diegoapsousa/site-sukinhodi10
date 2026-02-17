@@ -5,98 +5,87 @@
 }
 
 body {
-    background-color: #c62828; /* Vermelho vibrante */
-    color: white;
-    font-family: 'Arial Black', sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+    background-color: #fffcf0; /* Tom suave que lembra suco/fruta */
+    color: #333;
 }
 
-/* Efeito de Raios no Fundo */
-.fundo-hq {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 200vw;
-    height: 200vw;
-    transform: translate(-50%, -50%);
-    background: repeating-conic-gradient(
-        from 0deg,
-        #e53935 0deg 15deg,
-        #b71c1c 15deg 30deg
-    );
-    z-index: -1;
-}
-
+/* Header */
 header {
-    padding: 40px;
-    margin-left: 20px;
-}
-
-.logo {
-    width: 380px;
-    /* Remove o fundo preto do seu arquivo nome.png */
-    mix-blend-mode: screen; 
-    filter: drop-shadow(5px 5px 0px #0056b3); /* Sombra azul nas letras do logo */
+    background-color: #ff9f43; /* Laranja vibrante */
+    padding: 15px 0;
 }
 
 nav {
-    margin-top: 25px;
     display: flex;
-    gap: 15px;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.btn-nav {
+.logo img {
+    height: 60px; /* Ajuste o tamanho do seu nome.png aqui */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a {
     text-decoration: none;
     color: white;
-    padding: 10px 25px;
     font-weight: bold;
-    font-size: 1.1rem;
+    margin-left: 20px;
 }
 
-.btn-nav.active {
-    background-color: white;
-    color: #b71c1c;
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 60px 20px;
 }
 
-main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    padding: 0 60px;
-    position: relative;
+.img-destaque {
+    max-width: 300px;
+    margin-top: 20px;
+    filter: drop-shadow(5px 5px 15px rgba(0,0,0,0.1));
 }
 
-.container-texto h1 {
-    font-size: 5rem;
-    /* Letras brancas com sombra azul como você pediu */
+/* Galeria de Produtos */
+#produtos {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+#produtos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #e67e22;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.item img:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background: #333;
     color: white;
-    text-shadow: 6px 6px 0px #0056b3; 
-    margin-bottom: 5px;
-}
-
-.posicao-jarrinha {
-    position: absolute;
-    right: 80px;
-    bottom: -20px;
-}
-
-.jarrinha {
-    width: 450px;
-    /* Remove o fundo preto do seu arquivo jarrinha.png */
-    mix-blend-mode: screen;
-    filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.5));
-}
-
-/* Ajustes para Celular */
-@media (max-width: 768px) {
-    header { margin-left: 0; text-align: center; }
-    .logo { width: 280px; margin: 0 auto; }
-    nav { justify-content: center; }
-    .container-texto h1 { font-size: 3rem; text-align: center; }
-    .posicao-jarrinha { position: relative; right: 0; text-align: center; }
-    .jarrinha { width: 280px; }
-    main { flex-direction: column; padding: 20px; }
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
 }
