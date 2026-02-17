@@ -1,3 +1,4 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,17 +7,17 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #3d3d3d; /* Fundo cinza escuro da imagem aprovada */
+    background-color: #444444; /* Fundo cinza escuro da imagem */
     color: #333;
 }
 
 .container {
-    max-width: 950px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header Vermelho com Estilo Kool-Aid */
+/* Topo Vermelho Estilo Kool-Aid */
 .topo-vermelho {
     background-color: #c92a2a;
     padding: 40px 0;
@@ -25,24 +26,23 @@ body {
 
 .logo-koolaid {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 4.5rem;
+    font-size: 5rem;
     color: white;
-    letter-spacing: 2px;
-    /* Borda azul e sombra conforme solicitado */
+    /* Efeito de borda azul e sombra */
     text-shadow: 
-        -3px -3px 0 #1a4a8e,  
-         3px -3px 0 #1a4a8e,
-        -3px  3px 0 #1a4a8e,
-         3px  3px 0 #1a4a8e,
-         6px  6px 0px rgba(0,0,0,0.3);
+        -4px -4px 0 #1a4a8e,  
+         4px -4px 0 #1a4a8e,
+        -4px  4px 0 #1a4a8e,
+         4px  4px 0 #1a4a8e,
+         8px  8px 0px rgba(0,0,0,0.3);
+    letter-spacing: 3px;
 }
 
-/* Menu de Navegação Branco */
+/* Menu de Navegação */
 .menu-nav {
     background: white;
-    padding: 10px 0;
+    padding: 12px 0;
     margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .menu-flex {
@@ -57,15 +57,14 @@ body {
     gap: 10px;
     border: 1px solid #ddd;
     padding: 5px 15px;
-    border-radius: 4px;
 }
 
-.mini-jarra { height: 30px; }
+.mini-jarra { height: 35px; }
 
 .menu-nav ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 25px;
 }
 
 .menu-nav a {
@@ -75,18 +74,27 @@ body {
     font-size: 0.9rem;
 }
 
-/* Cards de Conteúdo */
-.card-branco {
+/* Estilo dos Cards Brancos */
+.card {
     background: white;
+    border-radius: 4px;
     padding: 30px;
     margin-bottom: 30px;
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+.card h2 {
+    color: #1a4a8e;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Layout História (Jarra + Texto) */
 .card-content-flex {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 .lado-esquerdo {
@@ -96,37 +104,36 @@ body {
 
 .jarra-destaque {
     width: 100%;
-    max-width: 180px;
+    max-width: 200px;
     margin-bottom: 15px;
 }
 
-.slogan-vermelho {
+.slogan {
     color: #c92a2a;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .lado-direito { flex: 2; }
-.lado-direito h2 { color: #1a4a8e; margin-bottom: 15px; }
 
-.integrantes-box {
-    margin-top: 20px;
-    background: #f4f4f4;
+.lado-direito p { margin-bottom: 15px; text-align: justify; }
+
+.integrantes {
+    background: #f1f1f1;
     padding: 15px;
     border-left: 5px solid #1a4a8e;
 }
 
-/* Grid da Galeria */
+/* Galeria em Grid */
 .grid-fotos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
-    margin-top: 15px;
 }
 
 .item-foto img {
     width: 100%;
-    height: 160px;
+    height: 180px;
     object-fit: cover;
     border: 1px solid #ddd;
 }
@@ -138,8 +145,8 @@ body {
     color: #666;
 }
 
-.footer-site {
-    text-align: center;
-    color: #aaa;
+footer {
     padding: 40px 0;
+    color: white;
+    text-align: center;
 }
