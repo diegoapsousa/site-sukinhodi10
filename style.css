@@ -5,129 +5,134 @@
 }
 
 body {
-    font-family: 'Oswald', sans-serif;
-    background-color: #f5e6ca; /* Bege nítido */
-    color: #222;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5; /* Cinza claro da imagem */
+    color: #333;
 }
 
 .container {
-    max-width: 1000px; /* Prende o site no centro para o zoom ficar em 100% */
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header e Menu Organizados */
-header {
-    background-color: #d63031;
-    padding: 15px 0;
-    border-bottom: 4px solid #000;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+/* Header Vermelho */
+.main-header {
+    background-color: #c92a2a; /* Vermelho Ki-suco */
+    padding: 30px 0;
+    text-align: center;
 }
 
-.nav-container {
+/* Efeito Ki-suco/Kool-aid no Texto */
+.kool-aid-style {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4rem;
+    color: white;
+    /* Borda e Sombra Azul */
+    text-shadow: 
+        -3px -3px 0 #1a4a8e,  
+         3px -3px 0 #1a4a8e,
+        -3px  3px 0 #1a4a8e,
+         3px  3px 0 #1a4a8e,
+         6px  6px 0px rgba(0,0,0,0.2);
+    letter-spacing: 2px;
+}
+
+/* Menu Branco */
+.sub-menu {
+    background: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.menu-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.brand {
-    font-family: 'Bangers', cursive;
-    font-size: 3rem; /* Nome grande e impactante */
-    color: #fff;
-    text-shadow: 3px 3px 0px #000;
-    letter-spacing: 2px;
+.mini-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    border-radius: 5px;
 }
 
-nav ul {
+.mini-logo img { height: 30px; }
+
+.sub-menu ul {
     display: flex;
     list-style: none;
     gap: 20px;
 }
 
-nav a {
-    color: #fff;
+.sub-menu a {
     text-decoration: none;
+    color: #666;
     font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1rem;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 50px 0;
+/* Cartões de Conteúdo */
+.hero-card, .content-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
-.mascote {
-    max-width: 250px; /* Jarra aumentada proporcionalmente */
-    height: auto;
-    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
-h1 {
-    color: #d63031;
-    font-size: 2rem;
-    margin-top: 20px;
-    text-transform: uppercase;
+.jarra-grande {
+    width: 150px;
 }
 
-/* História */
-.historia-card {
-    background: #fff;
-    padding: 40px;
-    border: 3px solid #000;
-    box-shadow: 10px 10px 0px #d63031;
-    margin: 40px 0;
-}
-
-.historia-card h2 {
-    color: #d63031;
-    margin-bottom: 25px;
-    text-transform: uppercase;
+.hero-title {
+    color: #c92a2a;
     font-size: 2rem;
 }
 
-.texto-historia p {
-    margin-bottom: 15px;
-    text-align: justify;
-}
+.highlight { color: #c92a2a; font-weight: bold; }
 
-.integrantes {
+.integrantes-box {
     margin-top: 20px;
-    padding-top: 20px;
-    border-top: 2px dashed #d63031;
-    text-align: center;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 /* Galeria */
-.titulo-sessao {
-    text-align: center;
-    color: #d63031;
-    margin-bottom: 30px;
-    font-size: 2rem;
-}
-
-.grid-galeria {
+.photo-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding-bottom: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 15px;
 }
 
-.grid-galeria img {
+.photo-item img {
     width: 100%;
-    height: 350px;
-    object-fit: cover; /* Mantém as fotos sem esticar */
-    border: 5px solid #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
-footer {
-    background: #222;
-    color: #fff;
+.photo-item p {
+    font-size: 0.8rem;
     text-align: center;
-    padding: 40px;
+    margin-top: 5px;
+}
+
+.footer-simple {
+    background: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
 }
