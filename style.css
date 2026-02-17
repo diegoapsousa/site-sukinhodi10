@@ -6,21 +6,25 @@
 
 body {
     font-family: 'Oswald', sans-serif;
-    background-color: #f5e6ca; /* Bege claro */
+    background-color: #f5e6ca; /* Bege nítido */
     color: #222;
+    line-height: 1.6;
 }
 
 .container {
-    max-width: 1000px; /* Prende o site no centro */
+    max-width: 1000px; /* Prende o site no centro para o zoom ficar em 100% */
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header Organizado */
+/* Header e Menu Organizados */
 header {
-    background-color: #d63031; /* Vermelho */
-    padding: 20px 0;
+    background-color: #d63031;
+    padding: 15px 0;
     border-bottom: 4px solid #000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .nav-container {
@@ -31,7 +35,7 @@ header {
 
 .brand {
     font-family: 'Bangers', cursive;
-    font-size: 2.5rem;
+    font-size: 3rem; /* Nome grande e impactante */
     color: #fff;
     text-shadow: 3px 3px 0px #000;
     letter-spacing: 2px;
@@ -48,51 +52,82 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
-/* Conteúdo Principal */
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 40px 0;
+    padding: 50px 0;
 }
 
 .mascote {
-    max-width: 150px; /* Tamanho controlado */
+    max-width: 250px; /* Jarra aumentada proporcionalmente */
     height: auto;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));
 }
 
 h1 {
     color: #d63031;
-    margin-top: 10px;
+    font-size: 2rem;
+    margin-top: 20px;
+    text-transform: uppercase;
 }
 
+/* História */
 .historia-card {
     background: #fff;
-    padding: 30px;
+    padding: 40px;
     border: 3px solid #000;
-    box-shadow: 8px 8px 0px #d63031;
-    margin: 30px 0;
+    box-shadow: 10px 10px 0px #d63031;
+    margin: 40px 0;
 }
 
-.grid {
+.historia-card h2 {
+    color: #d63031;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.texto-historia p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.integrantes {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px dashed #d63031;
+    text-align: center;
+}
+
+/* Galeria */
+.titulo-sessao {
+    text-align: center;
+    color: #d63031;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.grid-galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
-    margin-bottom: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding-bottom: 60px;
 }
 
-.grid img {
+.grid-galeria img {
     width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    height: 350px;
+    object-fit: cover; /* Mantém as fotos sem esticar */
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 footer {
     background: #222;
     color: #fff;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
 }
