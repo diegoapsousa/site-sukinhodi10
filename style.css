@@ -9,20 +9,31 @@
 * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
 body { font-family: 'Montserrat', sans-serif; background: #fff; color: var(--azul); }
 
+/* Header */
 .ks-header { background: var(--amarelo); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
 .ks-nav-flex { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 .ks-logo-text { font-family: 'Luckiest Guy', cursive; font-size: 2.2rem; color: #fff; text-shadow: 3px 3px 0 var(--azul); }
 .ks-logo-text span { color: var(--vermelho); }
+.ks-menu ul { display: flex; list-style: none; gap: 15px; }
+.ks-menu a { text-decoration: none; color: #fff; background: var(--azul); padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 0.8rem; }
 
+/* Hero */
 .ks-hero { background: linear-gradient(180deg, var(--amarelo) 0%, var(--laranja) 100%); padding: 80px 0 140px; position: relative; text-align: center; }
-.floating-jar { width: 350px; height: auto; animation: bounce 4s ease-in-out infinite; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2)); }
+.ks-hero-flex { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+
+.floating-jar { 
+    width: 320px; 
+    height: auto; 
+    animation: bounce 4s ease-in-out infinite; 
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2)); 
+}
 
 @keyframes bounce {
     0%, 100% { transform: translateY(0) rotate(0deg); }
     50% { transform: translateY(-25px) rotate(5deg); }
 }
 
-.ks-hero-text h2 { font-size: 4.5rem; color: #fff; text-shadow: 5px 5px 0 var(--azul); margin-bottom: 25px; }
+.ks-hero-text h2 { font-size: 4rem; color: #fff; text-shadow: 5px 5px 0 var(--azul); margin-bottom: 25px; line-height: 0.9; }
 
 .btn-spotify-hero {
     display: inline-block;
@@ -36,15 +47,19 @@ body { font-family: 'Montserrat', sans-serif; background: #fff; color: var(--azu
 }
 .btn-spotify-hero:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(29, 185, 84, 0.6); }
 
+/* Curva Suave Branca */
 .ks-divider { position: absolute; bottom: 0; width: 100%; height: 60px; background: #fff; clip-path: ellipse(70% 100% at 50% 100%); }
 
+/* Seções */
 .ks-section { padding: 80px 0; text-align: center; }
 .ks-bg-light { background: #fdf2e9; }
 .ks-title { font-size: 3rem; margin-bottom: 40px; color: var(--laranja); font-weight: 900; }
+.ks-content-card { background: #fff; padding: 40px; border-radius: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); max-width: 900px; margin: 0 auto; }
 
+/* Rodapé Social */
 .social-links { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
 .social-item { text-decoration: none; color: var(--azul); display: flex; flex-direction: column; align-items: center; gap: 10px; font-weight: bold; transition: 0.3s; }
-.social-item i { font-size: 3rem; }
+.social-item i { font-size: 3.5rem; } /* Ícones maiores no rodapé */
 .social-item:hover { transform: translateY(-10px); color: var(--vermelho); }
 .social-item.spotify:hover { color: var(--spotify); }
 
