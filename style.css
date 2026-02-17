@@ -1,83 +1,20 @@
-/* Paleta de Cores Ki-Suco */
-:root {
-    --amarelo: #ffc400;
-    --laranja: #ff8c00;
-    --azul: #2b3a8c;
-    --vermelho: #d63031;
-    --bege: #fdf2e9;
+/* ... (Mantenha o resto igual, apenas ajuste esses pontos abaixo) ... */
+
+.logo-img {
+    height: 60px; /* Ajuste o tamanho do seu logo nome.png */
+    width: auto;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--azul);
-    overflow-x: hidden;
+.jarra-principal {
+    width: 300px; /* Tamanho da jarra */
+    height: auto;
 }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-/* Header */
-.ks-header {
-    background-color: var(--amarelo);
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.ks-nav-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.ks-logo {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 2.2rem;
-    color: white;
-    text-shadow: 3px 3px 0 var(--azul);
-}
-
-.ks-logo span { color: var(--vermelho); }
-
-.ks-menu ul { display: flex; list-style: none; gap: 15px; }
-
-.ks-menu a {
-    text-decoration: none;
-    color: white;
-    background: var(--azul);
-    padding: 10px 22px;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 0.8rem;
-    transition: 0.3s;
-}
-
-.ks-menu a:hover { transform: scale(1.1); background: var(--vermelho); }
-
-/* Hero Section */
-.ks-hero {
-    background: linear-gradient(180deg, var(--amarelo) 0%, var(--laranja) 100%);
-    padding: 80px 0 120px 0;
-    position: relative;
-}
-
-.ks-hero-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-.ks-hero-img img {
-    width: 320px;
-    filter: drop-shadow(10px 10px 0 rgba(0,0,0,0.1));
-}
-
+/* Garante que a animação funcione */
 .floating {
     animation: bounce 3s ease-in-out infinite;
+    display: block;
+    margin: 0 auto;
 }
 
 @keyframes bounce {
@@ -85,77 +22,16 @@ body {
     50% { transform: translateY(-20px); }
 }
 
-.ks-hero-text h2 {
-    font-size: 4rem;
-    color: white;
-    font-weight: 900;
-    line-height: 1;
-}
-
-.highlight { color: var(--vermelho); }
-
-.wave {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    line-height: 0;
-}
-
-.wave svg { width: 100%; height: 80px; }
-.shape-fill { fill: #ffffff; }
-
-/* Seções */
-.ks-section { padding: 80px 0; }
-.ks-bg-light { background-color: var(--bege); }
-
-.ks-title {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 40px;
-    font-weight: 900;
-    color: var(--laranja);
-    text-transform: uppercase;
-}
-
-.ks-content-card {
-    background: white;
-    padding: 40px;
-    border-radius: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    line-height: 1.8;
-}
-
-.ks-integrantes { margin-top: 30px; text-align: center; }
-
-.tags { display: flex; justify-content: center; gap: 10px; margin-top: 15px; flex-wrap: wrap; }
-
-.tags span {
-    background: var(--amarelo);
-    color: var(--azul);
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: 700;
-}
-
-/* Galeria */
-.ks-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-}
-
 .ks-photo img {
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 25px;
-    border: 6px solid white;
+    border-radius: 20px;
+    border: 5px solid white;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-.ks-footer {
-    background: var(--azul);
-    color: white;
-    text-align: center;
-    padding: 40px;
+.ks-photo img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
 }
