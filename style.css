@@ -7,26 +7,24 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-body { font-family: 'Montserrat', sans-serif; background: #fff; color: var(--azul); line-height: 1.6; }
+body { font-family: 'Montserrat', sans-serif; background: #fff; color: var(--azul); }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-/* Header */
+/* Header e Logo */
 .ks-header { background: var(--amarelo); padding: 15px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
 .ks-nav-flex { display: flex; justify-content: space-between; align-items: center; }
 .ks-logo-text { font-family: 'Luckiest Guy', cursive; font-size: 2.2rem; color: #fff; text-shadow: 3px 3px 0 var(--azul); }
 .ks-logo-text span { color: var(--vermelho); }
-.ks-menu ul { display: flex; list-style: none; gap: 10px; }
-.ks-menu a { text-decoration: none; color: #fff; background: var(--azul); padding: 8px 18px; border-radius: 30px; font-weight: 700; font-size: 0.8rem; }
 
-/* Hero Section */
-.ks-hero { background: linear-gradient(180deg, var(--amarelo) 0%, var(--laranja) 100%); padding: 80px 0 130px; position: relative; overflow: hidden; }
-.ks-hero-flex { display: flex; align-items: center; justify-content: center; gap: 50px; flex-wrap: wrap; }
+/* Hero e Mascote */
+.ks-hero { background: linear-gradient(180deg, var(--amarelo) 0%, var(--laranja) 100%); padding: 80px 0 140px; position: relative; text-align: center; }
+.ks-hero-flex { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
 
 .floating-jar {
     width: 350px;
     height: auto;
     filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
-    animation: bounceRotate 4s ease-in-out infinite;
+    animation: bounce 4s ease-in-out infinite;
     transition: 0.5s;
 }
 .floating-jar:hover {
@@ -34,43 +32,45 @@ body { font-family: 'Montserrat', sans-serif; background: #fff; color: var(--azu
     transform: scale(1.05);
 }
 
-@keyframes bounceRotate {
+@keyframes bounce {
     0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-30px) rotate(6deg); }
+    50% { transform: translateY(-25px) rotate(5deg); }
 }
 
-.ks-hero-text h2 { font-size: 4.5rem; color: #fff; line-height: 0.9; font-weight: 900; text-transform: uppercase; text-shadow: 5px 5px 0 var(--azul); margin-bottom: 25px; }
-.highlight { color: #fff; }
+.ks-hero-text h2 { font-size: 4.5rem; color: #fff; line-height: 0.9; text-shadow: 4px 4px 0 var(--azul); margin-bottom: 25px; }
 
 .btn-spotify-hero {
     display: inline-block;
     background: var(--spotify);
     color: #fff;
     text-decoration: none;
-    padding: 15px 35px;
+    padding: 15px 30px;
     border-radius: 50px;
     font-weight: 900;
-    font-size: 1.1rem;
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-.btn-spotify-hero:hover { transform: scale(1.1); box-shadow: 0 0 25px rgba(29, 185, 84, 0.6); }
+.btn-spotify-hero:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(29, 185, 84, 0.5); }
 
-/* Curva Suave na Base */
-.ks-divider { position: absolute; bottom: 0; width: 100%; height: 60px; background: #fff; clip-path: ellipse(70% 100% at 50% 100%); }
+/* Divisor curvo simétrico */
+.ks-divider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    clip-path: ellipse(70% 100% at 50% 100%);
+}
 
-/* Galeria e Seções */
+/* Seções e Contatos */
 .ks-section { padding: 80px 0; text-align: center; }
 .ks-bg-light { background: #fdf2e9; }
-.ks-title { font-size: 3rem; margin-bottom: 40px; color: var(--laranja); font-weight: 900; text-transform: uppercase; }
-.ks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
-.ks-photo img { width: 100%; height: 250px; object-fit: cover; border-radius: 20px; border: 6px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.ks-title { font-size: 3rem; margin-bottom: 30px; color: var(--laranja); font-weight: 900; }
+.ks-content-card { background: #fff; padding: 40px; border-radius: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); max-width: 900px; margin: 0 auto; }
 
-/* Rodapé Social */
 .social-links { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-.social-item { text-decoration: none; color: var(--azul); display: flex; flex-direction: column; align-items: center; gap: 10px; font-weight: 900; transition: 0.3s; }
+.social-item { text-decoration: none; color: var(--azul); display: flex; flex-direction: column; align-items: center; gap: 10px; font-weight: bold; transition: 0.3s; }
 .social-item i { font-size: 3rem; }
 .social-item:hover { transform: translateY(-10px); color: var(--vermelho); }
 .social-item.spotify:hover { color: var(--spotify); }
 
-.ks-footer { background: var(--azul); color: #fff; text-align: center; padding: 30px; }
+.ks-footer { background: var(--azul); color: #fff; padding: 30px; text-align: center; }
