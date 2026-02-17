@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #d32f2f; /* Vermelho base */
+    background-color: #c62828; /* Vermelho vibrante */
     color: white;
     font-family: 'Arial Black', sans-serif;
     height: 100vh;
@@ -14,8 +14,8 @@ body {
     flex-direction: column;
 }
 
-/* Efeito de Raios (Sunburst) */
-.sunburst {
+/* Efeito de Raios no Fundo */
+.fundo-hq {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -25,33 +25,25 @@ body {
     background: repeating-conic-gradient(
         from 0deg,
         #e53935 0deg 15deg,
-        #c62828 15deg 30deg
+        #b71c1c 15deg 30deg
     );
     z-index: -1;
-    animation: rotate 60s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 header {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 50px;
+    padding: 40px;
+    margin-left: 20px;
 }
 
 .logo {
-    width: 350px;
-    mix-blend-mode: screen; /* Remove fundo preto */
-    filter: drop-shadow(5px 5px 0px #0056b3); /* Sombra azul sólida estilo HQ */
+    width: 380px;
+    /* Remove o fundo preto do seu arquivo nome.png */
+    mix-blend-mode: screen; 
+    filter: drop-shadow(5px 5px 0px #0056b3); /* Sombra azul nas letras do logo */
 }
 
 nav {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     gap: 15px;
 }
@@ -59,49 +51,52 @@ nav {
 .btn-nav {
     text-decoration: none;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px 25px;
     font-weight: bold;
-    transition: 0.3s;
+    font-size: 1.1rem;
 }
 
 .btn-nav.active {
     background-color: white;
-    color: #c62828;
+    color: #b71c1c;
 }
 
 main {
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 60px;
     position: relative;
 }
 
-.conteudo-principal h1 {
-    font-size: 3rem;
-    text-shadow: 4px 4px 0px #0056b3; /* Sombra azul nas letras */
-    margin-bottom: 10px;
+.container-texto h1 {
+    font-size: 5rem;
+    /* Letras brancas com sombra azul como você pediu */
+    color: white;
+    text-shadow: 6px 6px 0px #0056b3; 
+    margin-bottom: 5px;
 }
 
-.container-jarrinha {
+.posicao-jarrinha {
     position: absolute;
-    right: 50px;
-    bottom: 0;
+    right: 80px;
+    bottom: -20px;
 }
 
 .jarrinha {
-    width: 500px;
+    width: 450px;
+    /* Remove o fundo preto do seu arquivo jarrinha.png */
     mix-blend-mode: screen;
-    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.5));
-    transform: rotate(-5deg);
+    filter: drop-shadow(10px 10px 30px rgba(0,0,0,0.5));
 }
 
-/* Ajuste Celular */
+/* Ajustes para Celular */
 @media (max-width: 768px) {
-    header { align-items: center; margin-left: 0; }
-    .logo { width: 250px; }
-    .conteudo-principal { text-align: center; margin-top: 50px; }
-    .container-jarrinha { position: relative; right: 0; margin-top: 20px; }
-    .jarrinha { width: 250px; }
+    header { margin-left: 0; text-align: center; }
+    .logo { width: 280px; margin: 0 auto; }
+    nav { justify-content: center; }
+    .container-texto h1 { font-size: 3rem; text-align: center; }
+    .posicao-jarrinha { position: relative; right: 0; text-align: center; }
+    .jarrinha { width: 280px; }
+    main { flex-direction: column; padding: 20px; }
 }
