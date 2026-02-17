@@ -1,139 +1,51 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sukinho Di 10</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #ff3c3c, #ff9a3c);
-      color: white;
-      text-align: center;
-    }
-
-    header {
-      padding: 60px 20px 30px;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    .hero img {
-      width: 240px;
-      max-width: 80%;
-      margin: 30px auto;
-      display: block;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-    }
-
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.15);
-      padding: 20px;
-      border-radius: 16px;
-      backdrop-filter: blur(10px);
-      transition: transform 0.2s ease, background 0.2s ease;
-      font-weight: bold;
-    }
-
-    .card:hover {
-      transform: translateY(-6px) scale(1.04);
-      background: rgba(255,255,255,0.25);
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 24px;
-      background: white;
-      color: #ff3c3c;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s ease;
-    }
-
-    .buttons a:hover {
-      background: #ffe3e3;
-    }
-
-    footer {
-      margin-top: 40px;
-      padding: 25px;
-      background: rgba(0,0,0,0.25);
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukin hodi - Sucos Naturais</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <h1>Sukinho Di 10</h1>
-    <div class="subtitle">A banda mais divertida que você vai ouvir hoje 🍹🎶</div>
-  </header>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="img/nome.png" alt="Sukin hodi Logo">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="hero">
-    <img src="https://upload.wikimedia.org/wikipedia/en/8/8e/Kool-Aid_Man.png" alt="Jarra estilo Kool‑Aid">
-  </div>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Sukin hodi</h1>
+                <p>O sabor natural da fruta no seu copo.</p>
+                <img src="img/jarra.png" alt="Jarra de Suco" class="img-destaque">
+            </div>
+        </section>
 
-  <section>
-    <h2>Sobre a banda</h2>
-    <p>
-      Sukinho Di 10 é uma banda fictícia cheia de energia, humor e músicas que
-      misturam festa, amizade e muita zoeira. O objetivo é simples: fazer você
-      rir, dançar e esquecer dos problemas por alguns minutos.
-    </p>
-  </section>
+        <section id="produtos">
+            <h2>Nossos Sucos</h2>
+            <div class="galeria">
+                <div class="item"><img src="img/foto1.png" alt="Suco 1"></div>
+                <div class="item"><img src="img/foto2.png" alt="Suco 2"></div>
+                <div class="item"><img src="img/foto3.png" alt="Suco 3"></div>
+                <div class="item"><img src="img/foto4.png" alt="Suco 4"></div>
+                <div class="item"><img src="img/foto5.png" alt="Suco 5"></div>
+                <div class="item"><img src="img/foto6.png" alt="Suco 6"></div>
+            </div>
+        </section>
+    </main>
 
-  <section>
-    <h2>Músicas mais famosas</h2>
-    <div class="grid">
-      <div class="card">🍹 Hino do Suquinho</div>
-      <div class="card">🎉 Festa na Cozinha</div>
-      <div class="card">🔥 Dança do Copão</div>
-      <div class="card">😎 Dez em Diversão</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Redes sociais</h2>
-    <div class="buttons">
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Sukinho Di 10 — Site criado para fins educativos e diversão 🎶
-  </footer>
+    <footer>
+        <p>&copy; 2026 Sukin hodi - Qualidade em cada gota.</p>
+    </footer>
 
 </body>
 </html>
