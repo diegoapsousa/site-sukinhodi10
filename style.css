@@ -7,7 +7,133 @@
 
 body {
     font-family: 'Verdana', sans-serif;
-    background-color: #fdf5e6; /* Fundo Creme */
+    background-color: #fdf5e6; /* Fu/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    /* Cor de fundo Bege mais forte para não parecer branco */
+    background-color: #f5e6ca; 
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header - Ajustado para o logo grande */
+header {
+    background-color: #d63031;
+    padding: 20px 0;
+    border-bottom: 4px solid #000;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Nome da banda MUITO maior */
+.logo-principal {
+    height: 200px; /* Aumentado significativamente */
+    width: auto;
+    /* Sombra para destacar o nome */
+    filter: drop-shadow(5px 5px 0px #000);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.jarra-img {
+    max-width: 250px;
+}
+
+.hero h1 {
+    color: #d63031;
+    font-size: 2.5rem;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+/* História da Banda */
+.cartao-historia {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    border: 3px solid #000;
+    box-shadow: 10px 10px 0px #d63031;
+    margin: 40px 0;
+}
+
+.titulo-secao {
+    color: #d63031;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.texto-historia p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.integrantes {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #d63031;
+}
+
+/* Galeria */
+.grid-fotos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.grid-fotos img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-top: 40px;
+}ndo Creme */
     color: #222;
     line-height: 1.8;
 }
@@ -123,3 +249,4 @@ footer {
     text-align: center;
     padding: 40px;
 }
+
