@@ -3,49 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sukinho di 10 | Punk Rock</title>
+    <title>Sukinho di 10 | Punk Rock Cultural</title>
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header-principal">
+    <header class="topo-vermelho">
         <div class="container">
-            <h1 class="nome-banda">Sukinho di 10</h1>
+            <h1 class="logo-koolaid">Sukinho di 10</h1>
         </div>
     </header>
 
-    <nav class="nav-branca">
-        <div class="container">
+    <nav class="menu-nav">
+        <div class="container menu-flex">
+            <div class="identidade-menu">
+                <img src="img/jarra.png" alt="Logo" class="mini-jarra">
+                <span>Sukinho di 10</span>
+            </div>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#historia">A Banda</a></li>
-                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#home">#Home</a></li>
+                <li><a href="#historia">#historia</a></li>
+                <li><a href="#galeria">#Galeria</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="conteudo-central">
-        <section id="home" class="hero">
-            <div class="container">
-                <img src="img/jarra.png" alt="Mascote Sukinho" class="jarra-principal">
-                <h2 class="slogan">PUNK ROCK COM SABOR DE DIVERSÃO</h2>
+    <main class="container">
+        <section id="historia" class="card-branco">
+            <div class="card-content-flex">
+                <div class="lado-esquerdo">
+                    <img src="img/jarra.png" alt="Jarra Sukinho" class="jarra-destaque">
+                    <p class="slogan-vermelho">Punk Rock com Sabor de Diversão</p>
+                </div>
+                
+                <div class="lado-direito">
+                    <h2>Nossa História</h2>
+                    <p>A banda <strong>Sukinho di 10</strong> foi formada no ano de 2002. Resolveram montar uma banda por forte influencia que tiveram das bandas de punk rock como Ramones, The Queers, Green Day e do cenário nacional como Holly Tree, Carbona, Flanders 72 entre outras.</p>
+                    
+                    <h3>Como surgiu</h3>
+                    <p>O nome sukinho di 10 foi dado devido às pausas durante o ensaio na casa do vocalista Diego, eles aproveitavam para tomar muito aquele suco chamado Ki-suco, pois era o mais barato da época e conhecido popularmente por suquinho de 10 centavos.</p>
+                    
+                    <div class="integrantes-box">
+                        <strong>Integrantes:</strong>
+                        <p>Vocal e Baixo: Diego (Deids) | Guitarra: Juninho | Bateria: Fagner</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="historia" class="secao-info">
-            <div class="card">
-                <h3>Nossa História</h3>
-                <p>A banda <strong>Sukinho di 10</strong> foi formada no ano de 2002. Influenciados pelo punk rock de bandas como Ramones e The Toy Dolls, transformamos a diversão dos ensaios com Ki-suco em música enérgica!</p>
-                <div class="integrantes">
-                    <p><strong>Integrantes:</strong> Diego (Vocal/Baixo) | Juninho (Guitarra) | Fagner (Bateria)</p>
-                </div>
+        <section id="galeria" class="card-branco">
+            <h2 class="titulo-sessao">Galeria do Rolê</h2>
+            <div class="grid-fotos">
+                <div class="item-foto"><img src="img/foto1.png"><p>Show 1</p></div>
+                <div class="item-foto"><img src="img/foto2.png"><p>Ensaios</p></div>
+                <div class="item-foto"><img src="img/foto3.png"><p>Na Estrada</p></div>
+                <div class="item-foto"><img src="img/foto4.png"><p>Energia</p></div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Sukinho di 10</p>
+    <footer class="footer-site">
+        <p>&copy; 2026 Sukinho di 10 - Rock Nacional e Cultura Local</p>
     </footer>
 
 </body>
