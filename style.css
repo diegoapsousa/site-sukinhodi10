@@ -6,132 +6,98 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #3d3d3d; /* Fundo cinza escuro conforme a foto */
-    color: #333;
+    background-color: #f5f5f5; /* Fundo leve para destacar o conteúdo */
+    text-align: center; /* Garante que tudo tenda ao centro */
 }
 
 .container {
-    max-width: 950px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header Vermelho com Nome Branco e Contorno Azul */
-.header-vermelho {
-    background-color: #c92a2a;
-    padding: 35px 0;
-    text-align: center;
+/* Header Vermelho com o Nome Estilizado */
+.header-principal {
+    background-color: #d63031;
+    padding: 50px 0;
 }
 
-.logo-tipo {
+.nome-banda {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 4.5rem;
-    color: white;
-    letter-spacing: 2px;
+    font-size: 5rem;
+    color: white; /* Letras Brancas */
+    letter-spacing: 3px;
+    /* Borda e Sombra Azul */
     text-shadow: 
         -3px -3px 0 #1a4a8e,  
          3px -3px 0 #1a4a8e,
         -3px  3px 0 #1a4a8e,
          3px  3px 0 #1a4a8e,
-         6px  6px 0px rgba(0,0,0,0.3);
+         6px 6px 0px rgba(0,0,0,0.2);
 }
 
-/* Menu Branco */
-.menu-nav {
-    background: white;
-    padding: 10px 0;
-    margin-bottom: 25px;
+/* Menu Simples e Centralizado */
+.nav-branca {
+    background: #fff;
+    padding: 15px 0;
+    border-bottom: 2px solid #ddd;
 }
 
-.menu-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.mini-id {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border: 1px solid #ddd;
-    padding: 5px 15px;
-}
-
-.mini-id img { height: 30px; }
-
-.menu-nav ul {
-    display: flex;
+.nav-branca ul {
     list-style: none;
-    gap: 20px;
-}
-
-.menu-nav a {
-    text-decoration: none;
-    color: #666;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-/* Cards Brancos */
-.card-branco {
-    background: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 4px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-}
-
-.flex-layout {
     display: flex;
+    justify-content: center;
     gap: 30px;
 }
 
-.col-jarra {
-    flex: 1;
-    text-align: center;
-}
-
-.jarra-foto {
-    width: 100%;
-    max-width: 180px;
-    margin-bottom: 15px;
-}
-
-.slogan-vermelho {
-    color: #c92a2a;
+.nav-branca a {
+    text-decoration: none;
+    color: #d63031;
     font-weight: bold;
-    font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
-.col-texto { flex: 2; }
-
-.col-texto h2 { color: #1a4a8e; margin-bottom: 15px; }
-
-.integrantes-box {
-    margin-top: 20px;
-    background: #f4f4f4;
-    padding: 15px;
-    border-left: 4px solid #1a4a8e;
+/* Área da Jarra (Mascote) */
+.hero {
+    padding: 60px 0;
 }
 
-/* Galeria */
-.grid-galeria {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
+.jarra-principal {
+    width: 320px; /* Tamanho aumentado para destaque */
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
 }
 
-.foto-item img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border: 1px solid #ddd;
+.slogan {
+    color: #d63031;
+    font-size: 1.8rem;
+    font-weight: 700;
 }
 
-.foto-item p { text-align: center; font-size: 0.8rem; margin-top: 5px; }
+/* Seção de Texto */
+.card {
+    background: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
 
-.rodape {
-    text-align: center;
-    color: #ccc;
-    padding: 40px 0;
+.card h3 {
+    margin-bottom: 20px;
+    color: #1a4a8e;
+}
+
+.integrantes {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-style: italic;
+}
+
+footer {
+    padding: 40px;
+    color: #999;
 }
