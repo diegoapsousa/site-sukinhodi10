@@ -1,92 +1,55 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sukinho di 10 | Punk Rock Sabor Diversão</title>
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+:root {
+    --amarelo: #ffc400;
+    --laranja: #ff8c00;
+    --azul: #2b3a8c;
+    --vermelho: #d63031;
+    --spotify: #1DB954;
+}
 
-    <header class="ks-header">
-        <div class="container ks-nav-flex">
-            <a href="#" class="ks-logo-link">
-                <div class="ks-logo-text">SUKINHO <span>DI 10</span></div>
-            </a>
-            <nav class="ks-menu">
-                <ul>
-                    <li><a href="#historia">A BANDA</a></li>
-                    <li><a href="#galeria">GALERIA</a></li>
-                    <li><a href="#contato">CONTATO</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; background: #fff; color: var(--azul); }
 
-    <section class="ks-hero">
-        <div class="container ks-hero-flex">
-            <div class="ks-hero-img">
-                <img src="img/jarra.png" alt="Mascote Sukinho" class="floating-jar">
-            </div>
-            <div class="ks-hero-text">
-                <h2>PUNK ROCK<br><span class="highlight">SABOR DIVERSÃO</span></h2>
-                <a href="https://open.spotify.com/artist/0V7F14S0lXp7t2M4lUfX9J" target="_blank" class="btn-spotify-hero">
-                    <i class="fab fa-spotify"></i> OUVIR NO SPOTIFY
-                </a>
-            </div>
-        </div>
-        <div class="ks-divider"></div>
-    </section>
+/* Ajuste no link do Logo */
+.ks-logo-link { text-decoration: none; transition: 0.3s; }
+.ks-logo-link:hover { transform: scale(1.05); }
 
-    <section id="historia" class="ks-section">
-        <div class="container">
-            <h2 class="ks-title">Nossa História</h2>
-            <div class="ks-content-card">
-                <p>A banda <strong>Sukinho di 10</strong> nasceu em 2002 em Carapicuíba. O nome é uma homenagem aos ensaios regados ao suquinho de 10 centavos.</p>
-                <p><strong>Vocal/Baixo:</strong> Diego (Deids) | <strong>Guitarra:</strong> Juninho | <strong>Bateria:</strong> Fagner</p>
-            </div>
-        </div>
-    </section>
+.ks-header { background: var(--amarelo); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+.ks-nav-flex { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
-    <section id="galeria" class="ks-section ks-bg-light">
-        <div class="container">
-            <h2 class="ks-title">Galeria do Rolê</h2>
-            <div class="ks-grid">
-                <div class="ks-photo"><img src="img/foto1.png" alt="Foto 1"></div>
-                <div class="ks-photo"><img src="img/foto2.png" alt="Foto 2"></div>
-                <div class="ks-photo"><img src="img/foto3.png" alt="Foto 3"></div>
-                <div class="ks-photo"><img src="img/foto4.png" alt="Foto 4"></div>
-                <div class="ks-photo"><img src="img/foto5.png" alt="Foto 5"></div>
-                <div class="ks-photo"><img src="img/foto6.png" alt="Foto 6"></div>
-            </div>
-        </div>
-    </section>
+.ks-logo-text { font-family: 'Luckiest Guy', cursive; font-size: 2.2rem; color: #fff; text-shadow: 3px 3px 0 var(--azul); }
+.ks-logo-text span { color: var(--vermelho); }
 
-    <section id="contato" class="ks-section">
-        <div class="container">
-            <h2 class="ks-title">Siga a Jarra</h2>
-            <div class="social-links">
-                <a href="https://www.instagram.com/sukinhodi10" target="_blank" class="social-item instagram">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-                <a href="https://open.spotify.com/artist/0V7F14S0lXp7t2M4lUfX9J" target="_blank" class="social-item spotify">
-                    <i class="fab fa-spotify"></i>
-                    <span>Spotify</span>
-                </a>
-                <a href="mailto:bandasukinhodi10@gmail.com" class="social-item email">
-                    <i class="fas fa-envelope"></i>
-                    <span>E-mail</span>
-                </a>
-            </div>
-        </div>
-    </section>
+.ks-menu ul { display: flex; list-style: none; gap: 15px; }
+.ks-menu a { text-decoration: none; color: #fff; background: var(--azul); padding: 8px 18px; border-radius: 30px; font-weight: 700; font-size: 0.8rem; }
 
-    <footer class="ks-footer">
-        <p>© 2026 Sukinho di 10 - Punk Rock Carapicuíba</p>
-    </footer>
+/* Hero Section */
+.ks-hero { background: linear-gradient(180deg, var(--amarelo) 0%, var(--laranja) 100%); padding: 80px 0 140px; position: relative; text-align: center; }
+.ks-hero-flex { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
 
-</body>
-</html>
+.floating-jar { width: 350px; height: auto; animation: bounce 4s ease-in-out infinite; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2)); }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-25px) rotate(5deg); }
+}
+
+.ks-hero-text h2 { font-size: 4.5rem; color: #fff; text-shadow: 5px 5px 0 var(--azul); margin-bottom: 25px; line-height: 1; }
+.btn-spotify-hero { display: inline-block; background: var(--spotify); color: #fff; text-decoration: none; padding: 15px 35px; border-radius: 50px; font-weight: 900; transition: 0.3s; }
+.btn-spotify-hero:hover { transform: scale(1.1); box-shadow: 0 0 20px rgba(29, 185, 84, 0.6); }
+
+/* Divisor curvo suave */
+.ks-divider { position: absolute; bottom: 0; width: 100%; height: 60px; background: #fff; clip-path: ellipse(70% 100% at 50% 100%); }
+
+.ks-section { padding: 80px 0; text-align: center; }
+.ks-bg-light { background: #fdf2e9; }
+.ks-title { font-size: 3rem; margin-bottom: 40px; color: var(--laranja); font-weight: 900; }
+
+.ks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.ks-photo img { width: 100%; height: 250px; object-fit: cover; border-radius: 20px; border: 5px solid #fff; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+.social-links { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+.social-item { text-decoration: none; color: var(--azul); display: flex; flex-direction: column; align-items: center; gap: 10px; font-weight: bold; transition: 0.3s; }
+.social-item i { font-size: 3rem; }
+.social-item:hover { color: var(--vermelho); transform: translateY(-5px); }
+
+.ks-footer { background: var(--azul); color: #fff; text-align: center; padding: 30px; }
